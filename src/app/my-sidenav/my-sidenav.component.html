@@ -1,0 +1,26 @@
+<h1>Sidenav</h1>
+
+<md-sidenav-layout class="demo-sidenav-layout">
+    
+  <md-sidenav #start mode="side">
+    Left
+    <br>
+    <button md-button (click)="start.close()">Close</button>
+    <br>
+    <button md-button (click)="end.open()">Open End Side</button>
+  </md-sidenav>
+
+  <md-sidenav #end align="end">
+    Right
+    <br>
+    <button md-button (click)="end.close()">Close</button>
+  </md-sidenav>
+
+  <div class="demo-sidenav-content">
+    <p>Content</p>
+    <button md-button (click)="start.toggle()">Toggle Start</button>
+    <button md-button (click)="end.toggle()">Toggle End</button>
+  </div>
+  
+</md-sidenav-layout>
+  

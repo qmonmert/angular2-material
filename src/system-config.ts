@@ -3,11 +3,34 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  '@angular2-material': 'vendor/@angular2-material'
 };
 
 /** User packages configuration. */
 const packages: any = {
 };
+
+// put the names of any of your Material components here
+const materialPkgs:string[] = [
+  'button',
+  'card',
+  'checkbox',
+  'core',
+  'grid-list',
+  'icon',
+  'input',
+  'list',
+  'progress-bar',
+  'progress-circle',
+  'radio',
+  'sidenav',
+  'tabs',
+  'toolbar'
+];
+
+materialPkgs.forEach((pkg) => {
+  packages[`@angular2-material/${pkg}`] = {main: `${pkg}.js`};
+});
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
@@ -29,6 +52,18 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
+  'app/cards-component',
+  'app/card-component',
+  'app/button-component',
+  'app/my-card',
+  'app/my-button',
+  'app/my-toolbar',
+  'app/my-grid',
+  'app/my-progress-bar',
+  'app/my-list',
+  'app/my-tab',
+  'app/my-input',
+  'app/my-sidenav',
   /** @cli-barrel */
 ];
 
